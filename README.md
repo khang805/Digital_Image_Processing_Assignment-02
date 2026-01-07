@@ -14,6 +14,7 @@ The primary goal is to understand the mathematical underpinnings of edge detecti
 
 The project is designed to process the dataset and automatically generate all analysis files into an `output/` directory.
 
+```text
 ├── 22i-1148_DIP_A-02.ipynb   # Main Jupyter Notebook (Source Code)
 ├── Report.pdf                # Detailed project report
 ├── dataset/                  # Input Data
