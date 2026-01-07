@@ -1,23 +1,23 @@
-Manual Edge Detection: Canny vs. Marr-Hildreth
+## Manual Edge Detection: Canny vs. Marr-Hildreth
 
 Author: M Abdurrahman Khan
 Roll No: 22i-1148
 Course: Digital Image Processing (DIP)
 Assignment: #02
 
-📖 Overview
+## 📖 Overview
 
 This project presents manual implementations of two classical edge detection algorithms:
 
-Canny Edge Detector
+1) Canny Edge Detector
 
-Marr–Hildreth (Laplacian of Gaussian – LoG)
+2) Marr–Hildreth (Laplacian of Gaussian – LoG)
 
 Both algorithms are implemented from scratch in Python, without using high-level edge detection functions such as cv2.Canny. The purpose of this assignment is to develop a deep understanding of the mathematical and algorithmic foundations of edge detection techniques.
 
 The implementations are evaluated on a dataset of 200 images, and their outputs are quantitatively compared against provided ground truth edge maps using standard performance metrics.
 
-📂 Project Structure
+## 📂 Project Structure
 
 All outputs are generated automatically when the notebook is executed.
 
@@ -34,8 +34,8 @@ All outputs are generated automatically when the notebook is executed.
 │   └── comparisons/            # Side-by-side visual comparisons
 └── README.md
 
-⚙️ Methodology
-1️⃣ Canny Edge Detector (Manual Implementation)
+## ⚙️ Methodology
+## 1️⃣ Canny Edge Detector (Manual Implementation)
 
 The Canny algorithm follows a multi-stage pipeline to detect edges accurately while minimizing noise:
 
@@ -46,21 +46,6 @@ Reduces image noise using a Gaussian kernel.
 Gradient Computation
 
 Uses Sobel operators to compute horizontal and vertical gradients
-
-𝐺
-𝑥
-,
-  
-𝐺
-𝑦
-G
-x
-	​
-
-,G
-y
-	​
-
 
 Gradient magnitude and direction are calculated.
 
@@ -78,11 +63,11 @@ Weak edges
 
 Non-edges
 
-Edge Tracking by Hysteresis
+Edge Tracking by Hysteresis:
 
 Weak edges are retained only if connected to strong edges.
 
-2️⃣ Marr–Hildreth (Laplacian of Gaussian – LoG)
+## 2️⃣ Marr–Hildreth (Laplacian of Gaussian – LoG)
 
 This method detects edges by identifying zero-crossings in the second derivative of the image.
 
@@ -95,7 +80,7 @@ Zero-Crossing Detection
 Edge points are detected where pixel values change sign
 (positive → negative or negative → positive).
 
-📊 Evaluation & Results
+## 📊 Evaluation & Results
 
 The algorithms were tested on a dataset of 200 images.
 For each image, Precision, Recall, and F1 Score were computed by comparing detected edges with the ground truth.
@@ -114,8 +99,7 @@ A visual comparison of average metrics is also generated:
 
 output/metrics_comparison.png
 
-🧠 Analysis
-
+## 🧠 Analysis
 Canny Edge Detector
 
 Produces thin and clean edges
@@ -132,19 +116,18 @@ Detects most image features
 
 More sensitive to noise, resulting in thicker edges
 
-🛠️ Dependencies
+## 🛠️ Dependencies
 
 Ensure the following Python libraries are installed:
 
 pip install numpy opencv-python matplotlib pandas scipy tqdm
 
-🚀 Usage Instructions
+## 🚀 Usage Instructions
 1️⃣ Prepare the Dataset
 
 Place input images in:
 
 dataset/images/
-
 
 Place ground truth .mat files in:
 
@@ -154,7 +137,7 @@ dataset/ground_truth/
 
 Open 22i-1148_DIP_A-02.ipynb using:
 
-Jupyter Notebook or
+Jupyter Notebook
 
 Google Colab
 
@@ -174,18 +157,8 @@ Save all outputs automatically
 
 Navigate to the output/ directory to access:
 
-comparisons/ → Visual side-by-side comparisons
+comparisons/ → Side-by-side visual comparisons
 
 detailed_results.csv → Per-image performance metrics
 
 metrics_comparison.png → Average metric comparison
-
-✅ Key Takeaways
-
-Manual implementation improves understanding of edge detection theory
-
-Canny is precision-oriented
-
-Marr–Hildreth excels in recall
-
-Choice of algorithm depends on application requirements
