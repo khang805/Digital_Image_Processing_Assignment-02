@@ -28,7 +28,7 @@ The project is designed to process the dataset and automatically generate all an
 └── README.md
 
 ## Methodology
-## Canny Edge Detector (Manual Implementation)
+### Canny Edge Detector (Manual Implementation)
 
 The Canny detector follows a multi-stage pipeline to detect true edges while minimizing noise:
 
@@ -52,7 +52,7 @@ Non-edges
 5) Edge Tracking by Hysteresis
 Retain weak edges only if connected to strong edges to finalize the edge map.
 
-## Marr–Hildreth (Laplacian of Gaussian – LoG)
+### Marr–Hildreth (Laplacian of Gaussian – LoG)
 
 This method detects edges by identifying zero-crossings in the second derivative:
 
