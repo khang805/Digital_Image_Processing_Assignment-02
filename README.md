@@ -73,11 +73,13 @@ All per-image metrics are saved in:
 
 output/detailed_results.csv
 
-📈 Average Performance Summary
-Metric	Canny Edge Detector	Marr-Hildreth (LoG)
-Precision	0.3163	0.2982
-Recall	  0.1470	0.6095
-F1 Score	0.1766	0.3665
+### 📈 Average Performance Summary
+
+| Metric | Canny Edge Detector | Marr-Hildreth (LoG) |
+| :--- | :--- | :--- |
+| **Precision** | 0.3163 | 0.2982 |
+| **Recall** | 0.1470 | 0.6095 |
+| **F1 Score** | 0.1766 | 0.3665 |
 
 A visual comparison of average metrics is also generated:
 
