@@ -34,51 +34,40 @@ All outputs are generated automatically when the notebook is executed.
 │   └── comparisons/            # Side-by-side visual comparisons
 └── README.md
 
-## ⚙️ Methodology
-## 1️⃣ Canny Edge Detector (Manual Implementation)
+## Methodology
+## Canny Edge Detector (Manual Implementation)
 
-The Canny algorithm follows a multi-stage pipeline to detect edges accurately while minimizing noise:
+The Canny detector follows a multi-stage pipeline to detect true edges while minimizing noise:
 
-Gaussian Smoothing
+1) Gaussian Smoothing
+Reduce image noise using a Gaussian filter.
 
-Reduces image noise using a Gaussian kernel.
+2) Gradient Computation
+Compute horizontal and vertical gradients using Sobel operators.
+Calculate gradient magnitude and direction.
 
-Gradient Computation
+3) Non-Maximum Suppression (NMS)
+Thin edges to single-pixel width by suppressing non-maximal values.
 
-Uses Sobel operators to compute horizontal and vertical gradients
-
-Gradient magnitude and direction are calculated.
-
-Non-Maximum Suppression (NMS)
-
-Thins edges to a single-pixel width by suppressing non-maximal values.
-
-Double Thresholding
-
-Pixels are classified as:
+4) Double Thresholding
+Classify pixels as:
 
 Strong edges
-
 Weak edges
-
 Non-edges
 
-Edge Tracking by Hysteresis:
+5) Edge Tracking by Hysteresis
+Retain weak edges only if connected to strong edges to finalize the edge map.
 
-Weak edges are retained only if connected to strong edges.
+## Marr–Hildreth (Laplacian of Gaussian – LoG)
 
-## 2️⃣ Marr–Hildreth (Laplacian of Gaussian – LoG)
+This method detects edges by identifying zero-crossings in the second derivative:
 
-This method detects edges by identifying zero-crossings in the second derivative of the image.
+1) LoG Filtering
+Smooth the image and compute the second derivative using a Laplacian of Gaussian kernel.
 
-LoG Kernel Convolution
-
-The image is smoothed and differentiated using a Laplacian of Gaussian kernel.
-
-Zero-Crossing Detection
-
-Edge points are detected where pixel values change sign
-(positive → negative or negative → positive).
+2) Zero-Crossing Detection
+Identify pixels where the filtered image changes sign (positive → negative or negative → positive), which correspond to edges.
 
 ## 📊 Evaluation & Results
 
@@ -92,7 +81,7 @@ output/detailed_results.csv
 📈 Average Performance Summary
 Metric	Canny Edge Detector	Marr-Hildreth (LoG)
 Precision	0.3163	0.2982
-Recall	0.1470	0.6095
+Recall	  0.1470	0.6095
 F1 Score	0.1766	0.3665
 
 A visual comparison of average metrics is also generated:
