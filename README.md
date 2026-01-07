@@ -1,37 +1,31 @@
-## Manual Edge Detection: Canny vs. Marr-Hildreth
+# Manual Edge Detection: Canny vs. Marr-Hildreth
 
-Author: M Abdurrahman Khan
-Roll No: 22i-1148
-Course: Digital Image Processing (DIP)
-Assignment: #02
+**Author:** M Abdurrahman Khan (22i-1148)  
+**Course:** Digital Image Processing (DIP)  
+**Assignment:** #02
 
 ## 📖 Overview
 
-This project presents manual implementations of two classical edge detection algorithms:
+This project implements two fundamental edge detection algorithms—**Canny Edge Detector** and **Marr-Hildreth (Laplacian of Gaussian)**—completely from scratch using Python.
 
-1) Canny Edge Detector
-
-2) Marr–Hildreth (Laplacian of Gaussian – LoG)
-
-Both algorithms are implemented from scratch in Python, without using high-level edge detection functions such as cv2.Canny. The purpose of this assignment is to develop a deep understanding of the mathematical and algorithmic foundations of edge detection techniques.
-
-The implementations are evaluated on a dataset of 200 images, and their outputs are quantitatively compared against provided ground truth edge maps using standard performance metrics.
+The primary goal is to understand the mathematical underpinnings of edge detection without relying on high-level library functions (like `cv2.Canny`). The project evaluates these manual implementations on a dataset of **200 images** by comparing the generated edge maps against ground truth data using quantitative metrics.
 
 ## 📂 Project Structure
 
-All outputs are generated automatically when the notebook is executed.
+The project is designed to process the dataset and automatically generate all analysis files into an `output/` directory.
 
-├── 22i-1148_DIP_A-02.ipynb      # Main Jupyter Notebook (Source Code)
-├── Report.pdf                  # Detailed project report
-├── dataset/                    # Input dataset
-│   ├── images/                 # Input images (.jpg / .png)
-│   └── ground_truth/           # Ground truth edge maps (.mat)
-├── output/                     # Auto-generated outputs
-│   ├── detailed_results.csv    # Precision, Recall, F1 for each image
-│   ├── metrics_comparison.png  # Average performance comparison plot
-│   ├── canny_edges/            # Generated Canny edge maps
-│   ├── marr_hildreth_edges/    # Generated LoG edge maps
-│   └── comparisons/            # Side-by-side visual comparisons
+```text
+├── 22i-1148_DIP_A-02.ipynb   # Main Jupyter Notebook (Source Code)
+├── Report.pdf                # Detailed project report
+├── dataset/                  # Input Data
+│   ├── images/               # Source images (.jpg/.png)
+│   └── ground_truth/         # Ground truth binary maps (.mat)
+├── output/                   # Generated Artifacts (Auto-created on run)
+│   ├── detailed_results.csv  # Precision/Recall/F1 metrics for EVERY image
+│   ├── metrics_comparison.png# Bar chart comparing average performance
+│   ├── canny_edges/          # Generated Canny edge maps
+│   ├── marr_hildreth_edges/  # Generated LoG edge maps
+│   └── comparisons/          # Side-by-side visual comparisons
 └── README.md
 
 ## Methodology
