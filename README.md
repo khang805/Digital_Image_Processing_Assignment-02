@@ -86,7 +86,7 @@ A visual comparison of average metrics is also generated:
 output/metrics_comparison.png
 
 ## 🧠 Analysis
-Canny Edge Detector
+## Canny Edge Detector
 
 Produces thin and clean edges
 
@@ -94,7 +94,7 @@ Higher precision compared to recall
 
 Conservative thresholding causes missed faint edges
 
-Marr–Hildreth (LoG)
+## Marr–Hildreth (LoG)
 
 Achieves significantly higher recall (≈ 61%)
 
@@ -109,7 +109,7 @@ Ensure the following Python libraries are installed:
 pip install numpy opencv-python matplotlib pandas scipy tqdm
 
 ## 🚀 Usage Instructions
-1️⃣ Prepare the Dataset
+## 1️⃣ Prepare the Dataset
 
 Place input images in:
 
@@ -119,7 +119,7 @@ Place ground truth .mat files in:
 
 dataset/ground_truth/
 
-2️⃣ Run the Notebook
+## 2️⃣ Run the Notebook
 
 Open 22i-1148_DIP_A-02.ipynb using:
 
@@ -127,7 +127,7 @@ Jupyter Notebook
 
 Google Colab
 
-3️⃣ Execute All Cells
+## 3️⃣ Execute All Cells
 
 The notebook will:
 
@@ -139,7 +139,7 @@ Compute evaluation metrics
 
 Save all outputs automatically
 
-4️⃣ View Results
+## 4️⃣ View Results
 
 Navigate to the output/ directory to access:
 
