@@ -27,6 +27,7 @@ The project is designed to process the dataset and automatically generate all an
 │   ├── marr_hildreth_edges/  # Generated LoG edge maps
 │   └── comparisons/          # Side-by-side visual comparisons
 └── README.md
+'''text
 
 ## Methodology
 ## Canny Edge Detector (Manual Implementation)
